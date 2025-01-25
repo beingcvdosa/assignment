@@ -1,0 +1,710 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: rgb(60, 60, 60);
+    ;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: lightgray;
+
+
+}
+
+#container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+
+}
+
+#section1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+
+
+#enroll-button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    text-transform: uppercase;
+    font-weight: 600;
+    outline: none;
+    background-color: #3498db;
+    color: white;
+}
+
+#enroll-button:hover {
+    background-color: #2980b9;
+
+}
+
+#messages {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    color: white;
+    background-color: rgba(50, 50, 50, 0.8);
+    font-size: medium;
+    z-index: 9999;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#hr1 {
+    margin-top: 30px;
+
+}
+
+#course-overview {
+    max-width: 600px;
+    padding: 20px;
+}
+
+#course-overview h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#course-overview p {
+    margin: 5px 0;
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+#section2 {
+    display: flex;
+    flex-direction: row;
+}
+
+#video-container {
+    width: 65%;
+    padding: 10px;
+    margin-right: 5%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(50, 50, 50, 0.4);
+}
+
+#videobox {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+#video-details {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#video-details h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+#video-details p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+#video-summary {
+    padding: 20px 10px;
+    background-color: whitesmoke;
+    margin: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#video-summary h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#video-summary p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#right {
+    border-radius: 10px;
+    width: 29%;
+    max-height: 550px;
+    padding: 10px;
+    overflow: auto;
+    box-shadow: 0px 4px 10px rgba(50, 50, 50, 0.4);
+}
+
+#progress-bar-container {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    margin-top: 0;
+    z-index: 10;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #3498db;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.thumbnail {
+    width: 100%;
+    height: 100%px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#videos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.other-video-container {
+
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.other-video-container video {
+    width: 100%;
+    margin-bottom: 10px;
+
+
+}
+
+.other-video-container p {
+    margin: 5px 0;
+
+}
+
+.video-checkbox {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+#section3 {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+}
+
+#notes-container {
+    width: 49%;
+    padding: 10px;
+
+}
+
+
+#notes-container h1,
+#notes-container h2 {
+    font-size: 24px;
+}
+
+#select-video select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid rgb(168, 167, 167);
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+
+}
+
+#add-notes {
+    margin-top: 20px;
+}
+
+#add-notes h2 {
+    margin-bottom: 10px;
+}
+
+#notes-text {
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#save-note {
+    background-color: #3498db;
+    ;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+#save-note:hover {
+    background-color: #2980b9;
+}
+
+#test-knowledge-container {
+    margin-top: 20px;
+    width: 49%;
+    padding: 10px;
+
+    margin-left: 2%;
+
+}
+
+#test-knowledge-container h2,
+p {
+    margin-bottom: 10px;
+}
+
+
+#test-knowledge-container input {
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#submit-answer {
+    background-color: #3498db;
+    ;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+#submit-answer:hover {
+    background-color: #2980b9;
+}
+
+#section4 {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+#job-seek {
+    width: 49%;
+    padding: 10px;
+    margin-right: 2%;
+}
+
+#rate-text {
+    margin-top: 40px;
+    font-size: 22px;
+}
+
+.star-rating {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    display: inline-block;
+    font-size: x-large;
+}
+
+.star-rating input[type=radio] {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 1.2em;
+    color: var(--border-color);
+    float: right;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.star-rating label:hover,
+.star-rating label:hover~label,
+.star-rating input[type=radio]:checked~label {
+    color: #FFD700;
+}
+
+
+#leaderboard {
+    margin-top: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    width: 49%;
+    margin-bottom: 10px;
+}
+
+#leaderboard-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+#leaderboard-table th,
+#leaderboard-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+#leaderboard-table th {
+    font-weight: bold;
+}
+
+#leaderboard-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#leaderboard-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+#add-player {
+    margin-top: 20px;
+}
+
+#add-player input {
+    padding: 8px;
+    margin: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+
+#add-player button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#add-player button:hover {
+    background-color: #0056b3;
+}
+
+#discussion-forum {
+    margin-top: 40px;
+    width: 100%;
+}
+
+#discussion-forum h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+#comments-section {
+    background-color: whitesmoke;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.comment {
+    padding: 10px;
+}
+
+.comment strong {
+    color: #007bff;
+    font-size: 16px;
+}
+
+.comment p {
+    margin: 5px 0 0;
+}
+
+#add-comment h3 {
+    margin-left: 10px;
+}
+
+#add-comment input {
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#comment-author {
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#comment-text {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#post-comment {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#post-comment:hover {
+    background-color: #2980b9;
+}
+
+#section6 {
+    margin-top: 30px;
+
+}
+
+#toggle-dark-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-dark-button:hover {
+    background-color: #2980b9;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode button {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555555;
+}
+
+body.dark-mode #container {
+    background-color: #303030;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode #video-summary {
+    background-color: #303030;
+}
+
+body.dark-mode #video-select {
+    background-color: #303030;
+}
+
+body.dark-mode #section4 {
+    background-color: #303030;
+}
+
+body.dark-mode #comments-section {
+    background-color: #303030;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode a,
+body.dark-mode label,
+body.dark-mode span,
+body.dark-mode ul,
+body.dark-mode li,
+body.dark-mode textarea,
+body.dark-mode strong {
+    color: #ffffff;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select,
+body.dark-mode option,
+body.dark-mode td,
+body.dark-mode tr,
+body.dark-mode th {
+    color: white;
+    background-color: #303030;
+}
+
+body,
+button,
+#container {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode #right,
+body.dark-mode #videos-list,
+body.dark-mode .other-video-container {
+    padding: 10px;
+    color: white;
+    background-color: #303030;
+}
+
+
+#download-certificate {
+    margin-top: 20px;
+}
+
+#download-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#download-button:hover {
+    background-color: #2980b9;
+}
+
+@media screen and (max-width: 768px) {
+
+
+    #section1,
+    #section2,
+    #section3,
+    #section4 {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+
+    #video-container {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+
+    #right {
+        width: 100%;
+        max-height: none;
+        margin-top: 20px;
+    }
+
+
+    #videobox {
+        height: 300px;
+        max-width: 100%;
+    }
+
+
+    #course-overview {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+
+    #video-details {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+
+    #video-summary {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    #videos-list {
+        height: 400px;
+
+    }
+
+    .other-video-container {
+        width: 70%;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+
+    #select-video select,
+    #notes-text,
+    #test-knowledge-container input,
+    #add-comment input,
+    #comment-author,
+    #comment-text {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+    #save-note,
+    #submit-answer,
+    #post-comment,
+    #download-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+
+    #leaderboard-table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    #comments-section {
+        padding: 10px;
+    }
+
+
+    #toggle-dark-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

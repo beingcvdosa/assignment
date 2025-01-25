@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YouTube Course</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="section1">
+                <h1 id="header">Web Security Course Detail</h1>
+                <button onclick="enrollfunction()" id="enroll-button">Enroll Now</button>
+                <p id="messages">The messages are displayed here.</p>
+            </div>
+            <hr id="hr1">
+            <div id="course-overview">
+                <h1>Course Overview</h1>
+                <p>
+                    <span class="highlight">Title:</span>
+                    Algorithms, Problem Solving, and Tech Insights
+                </p>
+                <p>
+                    <span class="highlight">Skill Level:</span>
+                    Mixed
+                </p>
+                <p>
+                    <span class="highlight">Total Duration:</span>
+                    28.82 hours
+                </p>
+                <p>
+                    <span class="highlight">Number of Videos:</span>
+                    2
+                </p>
+                <p>
+                    <span class="highlight">Rating:</span>
+                    4.5/5
+                </p>
+            </div>
+            <div id="section2">
+                <div id="video-container">
+                    <iframe
+                        id="videobox"
+                        src="https://www.youtube.com/embed/oBt53YbR9Kk"
+                        frameborder="0"
+                        allowfullscreen
+                    ></iframe>
+                    <div id="video-details">
+                        <h1 id="description">Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges</h1>
+                    </div>
+                    <div id="video-summary">
+                        <h2>Course Summary</h2>
+                        <p>This Course covers the basics of dynamic programming, including problem-solving techniques and coding challenges.</p>
+                    </div>
+                </div>
+                <div id="right">
+                    <div id="progress-bar-container">
+                        <div id="progress-bar"> 0%</div>
+                    </div>
+                    <div id="videos-list">
+                        <div class="other-video-container">
+                            <img src="https://img.youtube.com/vi/oBt53YbR9Kk/0.jpg" class="thumbnail" alt="Video Thumbnail">
+                            <p id="views">45K views •</p>
+                            <p id="duration">Duration: 5:10:02</p>
+                            <input
+                                type="checkbox"
+                                class="video-checkbox"
+                                data-description="Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges"
+                                data-video-src="https://www.youtube.com/embed/oBt53YbR9Kk"
+                                id="video1"
+                            >
+                        </div>
+                        <div class="other-video-container">
+                            <img src="https://img.youtube.com/vi/nqowUJzG-iM/0.jpg" class="thumbnail" alt="Video Thumbnail">
+                            <p id="views">191K views •</p>
+                            <p id="duration">Duration: 13:57</p>
+                            <input
+                                type="checkbox"
+                                class="video-checkbox"
+                                data-description="Dynamic Programming - Introduction to Dynamic Programming"
+                                data-video-src="https://www.youtube.com/embed/nqowUJzG-iM"
+                                id="video2"
+                            >
+                        </div>
+                        <div class="other-video-container">
+                            <img src="https://img.youtube.com/vi/R4v_7hh4Yys/0.jpg" class="thumbnail" alt="Video Thumbnail">
+                            <p id="views">35K views •</p>
+                            <p id="duration">Duration: 1:02:27</p>
+                            <input
+                                type="checkbox"
+                                class="video-checkbox"
+                                data-description="Create Wordpress Website: Easy-to-use platform for creating customizable, responsive, websites"
+                                data-video-src="https://www.youtube.com/embed/R4v_7hh4Yys"
+                                id="video3"
+                            >
+                        </div>
+                        <div class="other-video-container">
+                            <img src="https://img.youtube.com/vi/5fb2aPlgoys/0.jpg " class="thumbnail" alt="Video Thumbnail">
+                            <p id="views">66K views •</p>
+                            <p id="duration">Duration: 2:41:22</p>
+                            <input
+                                type="checkbox"
+                                class="video-checkbox"
+                                data-description="JavaScript DOM Manipulation for dynamic Content and Element Interaction"
+                                data-video-src="https://www.youtube.com/embed/5fb2aPlgoys"
+                                id="video4"
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section3">
+                <div id="notes-container">
+                    <h1>Notes and Tools</h1>
+                    <div id="select-video">
+                        <select id="video-select" name="videos">
+                            <option value="video1">Select Option</option>
+                            <option value="video1">Dynamic Programming Basics</option>
+                            <option value="video2">Solving DP Problems</option>
+                            <option value="video3">Advanced DP Techniques</option>
+                        </select>
+                    </div>
+                    <div id="add-notes">
+                        <h2>Add Notes</h2>
+                        <input id="notes-text" placeholder="Write your notes here..."></input>
+                        <br>
+                        <button id="save-note" onclick="saveNote()">Save Note</button>
+                    </div>
+                </div>
+                <div id="test-knowledge-container">
+                    <h2>Test Your Knowledge</h2>
+                    <p>
+                        <strong>Question:</strong>
+                        What are the key steps to solve a dynamic programming problem?
+                    </p>
+                    <input id="knowledge-answer" placeholder="Write your answer here..."></input>
+                    <br>
+                    <button id="submit-answer" onclick="submitAnswer()">Submit Answer</button>
+                </div>
+            </div>
+            <div id="section4">
+                <div id="job-seek">
+                    <h2>Job Seeker Tips</h2>
+                    <ul></ul>
+                    <li>Optimize Your Resume and LinkedIn Profile</li>
+                    <li>Leverage Professional Networks</li>
+                    <li>Master the Interview Process</li>
+                    <li>Follow Up Strategically</li>
+                    <h2 id="rate-text">Rate this course</h2>
+                    <div class="star-rating" role="radiogroup" aria-label="Rate the course">
+                        <input
+                            type="radio"
+                            id="star5"
+                            name="rating"
+                            value="5"
+                        >
+                        <label for="star5" title="5 stars">★</label>
+                        <input
+                            type="radio"
+                            id="star4"
+                            name="rating"
+                            value="4"
+                        >
+                        <label for="star4" title="4 stars">★</label>
+                        <input
+                            type="radio"
+                            id="star3"
+                            name="rating"
+                            value="3"
+                        >
+                        <label for="star3" title="3 stars">★</label>
+                        <input
+                            type="radio"
+                            id="star2"
+                            name="rating"
+                            value="2"
+                        >
+                        <label for="star2" title="2 stars">★</label>
+                        <input
+                            type="radio"
+                            id="star1"
+                            name="rating"
+                            value="1"
+                        >
+                        <label for="star1" title="1 star">★</label>
+                    </div>
+                </div>
+                <div id="leaderboard">
+                    <h2 id="leaderboard-text">Leaderboard</h2>
+                    <table id="leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Name</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="section5">
+                <div id="discussion-forum">
+                    <h2>Discussion Forum</h2>
+                    <div id="comments-section">
+                        <div class="comment">
+                            <strong>Rawat:</strong>
+                            <p>Great explanation of dynamic programming!</p>
+                        </div>
+                        <div class="comment">
+                            <strong>Kartik:</strong>
+                            <p>Can someone explain backtracking in more detail?</p>
+                        </div>
+                    </div>
+                    <div id="add-comment">
+                        <h3>Add Comment</h3>
+                        <input id="comment-author" type="text" placeholder="Your Name">
+                        <textarea id="comment-text" placeholder="Write your comment here..."></textarea>
+                    </div>
+                    <button id="post-comment" onclick="postComment()">Post Comment</button>
+                </div>
+            </div>
+            <div id="section6">
+                <button id="toggle-dark-button">Toggle Dark Mode</button>
+                <div id="download-certificate">
+                    <button id="download-button">Download Certificate</button>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
